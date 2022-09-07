@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\tkinter"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"xstring": "cpp",
+			"string": "cpp"
+		}
+	}
+}

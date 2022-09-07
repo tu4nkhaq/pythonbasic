@@ -1,0 +1,6 @@
+003 Tran Hong Ngoc 10
+006 Tran Hai Yen 9
+002 Bui Thanh Hang 8
+004 Nguyen Hong Van 8
+001 Nguyen Hoang Anh 7
+005 Nguyen Minh Vuong 6

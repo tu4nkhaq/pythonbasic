@@ -1,0 +1,63 @@
+
+# Python code to demonstrate the working of
+# repeat()
+	
+# importing "itertools" for iterator operations
+# import itertools
+# print(list(itertools.permutations([0,1],2)))
+# # using repeat() to repeatedly print number
+# print ("Printing the numbers repeatedly : ")
+# for i in itertools.repeat(25, 4):
+#     print(i)
+# # import the product function from itertools module
+from itertools import product
+
+print("The cartesian product using repeat:")
+print(list(product(["A","B"], repeat = 2)))
+print()
+
+# print("The cartesian product of the containers:")
+# print(list(product(['geeks', 'for', 'geeks'], '23')))
+# print()
+
+# print("The cartesian product of the containers:")
+# print(list(product(['A','B'], [3, 4])))
+# import combinations from itertools module
+
+from itertools import combinations
+
+# print ("All the combination of list in sorted order(without replacement) is:")
+# print(list(combinations(['A', 2], 2)))
+# print()
+
+# print ("All the combination of string in sorted order(without replacement) is:")
+# print(list(combinations('AB', 2)))
+# print()
+
+# print ("All the combination of list in sorted order(without replacement) is:")
+# print(list(combinations(range(2), 2)))
+# Python code to demonstrate the working of
+# takewhile() and tee()
+
+# importing "itertools" for iterator operations
+import itertools
+
+# initializing list
+li = [2, 4, 6, 7, 8, 10, 20]
+
+# storing list in iterator
+iti = iter(li)
+
+# using takewhile() to print values till condition is false.
+print ("The list values till 1st false value are : ",end="")
+print (list(itertools.takewhile(lambda x : x%2==0,li )))
+
+# using tee() to make a list of iterators
+# makes list of 3 iterators having same values.
+it = itertools.tee(iti, 3)
+
+# printing the values of iterators
+print ("The iterators are : ")
+print (list(it))
+
+
