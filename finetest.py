@@ -348,14 +348,14 @@
 #         pass
 ###########
 # n=int(input("N="))
-from numpy import rint
+# from numpy import rint
 
 
-def nt(n):
-    for i in range(2,round(n**(1/2))):
-        if(n%i==0):
-            return False
-    return n>1  
+# def nt(n):
+#     for i in range(2,round(n**(1/2))):
+#         if(n%i==0):
+#             return False
+#     return n>1  
 # j=0
 # l=(i for i in range(1,n) if nt(i))
 # for i in l:
@@ -742,17 +742,35 @@ def nt(n):
 #     print("Diện tích = ", s)
 # else:
 #     print("Không tạo thành tam giác")
-import re
+###############################
+# import re
 
-# chuỗi nhiều dòng
-string = 'abc 12\
-de 23\nf45 6 \n quantrimang website'
+# # chuỗi nhiều dòng
+# string = 'abc 12\
+# de 23\nf45 6 \n quantrimang website'
 
-# so khớp các ký tự khoảng trắng
-pattern = '\s+'
+# # so khớp các ký tự khoảng trắng
+# pattern = '\s+'
 
-# chuỗi rỗng
-replace = ''
+# # chuỗi rỗng
+# replace = ''
 
-new_string = re.subn(pattern, replace, string) 
-print(new_string)
+# new_string = re.subn(pattern, replace, string) 
+# print(new_string)
+###############################
+a,b= map(int,input().split())
+l=[]
+sum=0
+j=0
+ans=0
+for i in range(a):
+    n=int(input())
+    l.append(n)
+for k in range(a):
+    sum+=l[k]
+    while(sum>b):
+        sum-=l[j]
+        j+=1
+    if(ans<(k-j+1)):
+        ans=(k-j+1)
+print(ans)

@@ -1,12 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 
-class Circle(object):
-    def __init__(self,radius,color):
-        self.radius=radius
-        self.color=color
-    def add_radius(self,r):
-        self.radius=self.radius+r
-        return(self.radius)
-    def drawcircle(self):
-        
+driver = webdriver.Edge("F://download//msedgedriver.exe")
 
+driver.get('https://bing.com')
 
+element = driver.find_element(By.ID, 'sb_form_q')
+element.send_keys('WebDriver')
+element.submit()
+
+time.sleep(5)
+driver.quit()
